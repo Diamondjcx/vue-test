@@ -1,17 +1,21 @@
 <template>
+  <h1>父传子</h1>
   <div class="container">
     <h3>父传子 props/defineProps</h3>
     <son1 :msg="parent_msg" />
   </div>
+  <h1>父传子/子孙</h1>
   <div class="container">
     <h3>父传子孙 provide/inject</h3>
     <grandson />
   </div>
+  <h1>父子间通讯</h1>
   <div class="container">
     <h3>3.4版本之前--父子互相通讯 v-model</h3>
     <son2 v-model="count" @update:modelValue="($event) => (foo = $event)" />
     {{ count }}
   </div>
+  <h1>vue3.4版本之后的 父子间通讯</h1>
   <div class="container">
     <h3>父子互相通讯 v-model/defineModel</h3>
     <son2 v-model="countModel" />
@@ -22,12 +26,15 @@
     <son2 v-model:firstName="firstName" v-model:lastName="lastName" />
     {{ firstName }} {{ lastName }}
   </div>
+  <h1>父访问子组件</h1>
   <div class="container">
     <h3>父组件访问子组件 ref/defineExpose</h3>
     <son1 ref="son1Ref" />
     <button @click="update">父组件点击调用子组件方法</button>
   </div>
-  <cssVue />
+  <div class="container">
+    <cssVue />
+  </div>
 </template>
 
 <script setup>
