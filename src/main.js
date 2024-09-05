@@ -1,14 +1,34 @@
-import './assets/main.css'
+import "./assets/main.css";
 
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createApp } from "vue";
+import { createPinia } from "pinia";
+import { createI18n } from "vue-i18n";
+import enUSLocale from "./plugin/locales/en-US.json";
+import zhLocale from "./plugin/locales/zh-CN.json";
 
-import App from './App.vue'
-import router from './router'
+import App from "./App.vue";
+import router from "./router";
+import { zhCN, enUS, dateZhCN } from "naive-ui";
 
-const app = createApp(App)
+const app = createApp(App);
 
-app.use(createPinia())
-app.use(router)
+const i18n = createI18n({
+  legacy: false,
+  locale: "zh-CN", // 默认语言
+  messages: {
+    "en-US": {
+      ...enUSLocale,
+      ...enUS,
+    },
+    "zh-CN": {
+      ...zhLocale,
+      ...zhCN,
+    },
+  },
+});
 
-app.mount('#app')
+app.use(i18n);
+app.use(createPinia());
+app.use(router);
+
+app.mount("#app");
