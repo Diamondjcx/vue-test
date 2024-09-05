@@ -1,13 +1,9 @@
 <template>
-  <div>
-    <Header></Header>
-    <parent />
-  </div>
+  <Home />
 </template>
 
 <script setup>
-import Header from "./views/Header.vue";
-import parent from "./views/parent.vue";
+import Home from "./views/Home.vue";
 </script>
 
 <style lang="scss" scoped>

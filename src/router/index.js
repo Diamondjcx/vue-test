@@ -1,5 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/parent.vue";
+import HomeView from "../views/Home.vue";
+import CssView from "../views/css/index.vue";
+import ParentView from "../views/communication/index.vue";
+import LanguageView from "../views/Header.vue";
+import NewFeatureView from "../views/newFeature/index.vue";
+// css新特性
+// 通信
+// vue3新特性
+// 中英文切换
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,6 +16,27 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView,
+    },
+    {
+      path: "/css",
+      name: "css-features",
+      component: CssView,
+    },
+
+    {
+      path: "/language",
+      name: "language",
+      component: LanguageView,
+    },
+    {
+      path: "/communication",
+      name: "communication-parent",
+      component: ParentView,
+    },
+    {
+      path: "/new",
+      name: "new-feature",
+      component: NewFeatureView,
     },
   ],
 });
