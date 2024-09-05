@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <h3>父传子 props/defineProps</h3>
+    <input type="text" v-model="parent_msg" />
     <Son1 :msg="parent_msg" />
   </div>
 </template>
