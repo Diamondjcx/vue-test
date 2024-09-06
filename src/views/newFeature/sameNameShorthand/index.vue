@@ -3,15 +3,15 @@
   <Test :id />
   <Test v-bind:id="id" />
 </template>
-
-<script setup>
+  
+  <script setup>
 /**
  * 模版语法-同名简写 3.4+
  */
 import { ref } from "vue";
-import Test from "./Test.vue";
+import Test from "./components/Test.vue";
 const id = ref("myId");
 </script>
-
-<style lang="scss" scoped>
+  
+  <style lang="scss" scoped>
 </style>

@@ -1,7 +1,7 @@
 <template>
   <n-menu
+    style="width: 200px"
     v-model:value="activeKey"
-    mode="horizontal"
     :options="menuOptions"
     responsive
   />

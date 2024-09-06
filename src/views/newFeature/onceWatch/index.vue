@@ -2,8 +2,8 @@
   <input type="text" v-model="inputValue" />
   <p>input值变化了，新值{{ newValue }} - 旧值{{ oldValue }}</p>
 </template>
-
-<script setup>
+  
+  <script setup>
 import { ref, watch } from "vue";
 const inputValue = ref("");
 const newValue = ref("");
@@ -19,6 +19,6 @@ watch(
   { once: true }
 );
 </script>
-
-<style lang="scss" scoped>
+  
+  <style lang="scss" scoped>
 </style>

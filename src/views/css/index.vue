@@ -1,9 +1,11 @@
 <template>
-  <h1>css新特性 垂直居中对齐</h1>
-  <div class="layout">这是一段文字</div>
-  <a href="https://build-your-own.org/blog/20240813_css_vertical_center/"
-    >链接</a
-  >
+  <div>
+    <h1>css新特性 垂直居中对齐</h1>
+    <div class="layout">这是一段文字</div>
+    <a href="https://build-your-own.org/blog/20240813_css_vertical_center/"
+      >链接</a
+    >
+  </div>
 </template>
   
   <script setup>
