@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+body,
+html,
+#app,
+.n-config-provider {
+  height: 100%;
+  width: 100%;
+}

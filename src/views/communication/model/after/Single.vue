@@ -4,7 +4,7 @@
   </div>
 </template>
       
-      <script setup>
+<script setup>
 import { defineModel } from "vue";
 
 const title = defineModel("title");

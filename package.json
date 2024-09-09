@@ -10,6 +10,7 @@
     "test:unit": "vitest"
   },
   "dependencies": {
+    "less": "^4.2.0",
     "pinia": "^2.1.7",
     "vue": "^3.5.1",
     "vue-i18n": "^9.14.0",
@@ -20,6 +21,7 @@
     "@vue/test-utils": "^2.4.5",
     "jsdom": "^24.0.0",
     "naive-ui": "^2.39.0",
+    "tailwindcss": "^3.4.10",
     "vite": "^5.2.8",
     "vitest": "^1.4.0"
   }

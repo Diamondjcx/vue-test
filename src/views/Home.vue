@@ -12,6 +12,9 @@
 import { defineComponent, h, ref } from "vue";
 import { NIcon } from "naive-ui";
 import { RouterLink } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
+const route = useRoute();
+console.log("route", useRoute());
 const menuOptions = [
   {
     key: "css-features",
@@ -26,7 +29,6 @@ const menuOptions = [
         { default: () => "css新特性" }
       ),
   },
-
   {
     label: () =>
       h(
@@ -77,6 +79,19 @@ const menuOptions = [
           },
         },
         { default: () => "继承" }
+      ),
+  },
+  {
+    key: "tailwindcss",
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: "tailwindcss",
+          },
+        },
+        { default: () => "tailwindcss测试" }
       ),
   },
 ];

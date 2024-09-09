@@ -5,7 +5,7 @@
   </div>
 </template>
         
-        <script setup>
+ <script setup>
 import { defineModel } from "vue";
 
 // ----
