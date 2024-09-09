@@ -4,6 +4,7 @@ import CssView from "../views/css/index.vue";
 import ParentView from "../views/communication/index.vue";
 import LanguageView from "../views/Header.vue";
 import NewFeatureView from "../views/newFeature/index.vue";
+import ExtendsView from "../views/extends/index.vue";
 // css新特性
 // 通信
 // vue3新特性
@@ -37,6 +38,11 @@ const router = createRouter({
       path: "/new",
       name: "new-feature",
       component: NewFeatureView,
+    },
+    {
+      path: "/extends",
+      name: "extends",
+      component: ExtendsView,
     },
   ],
 });

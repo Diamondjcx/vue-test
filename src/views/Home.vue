@@ -66,6 +66,19 @@ const menuOptions = [
       ),
     key: "new-feature",
   },
+  {
+    key: "extends",
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: "extends",
+          },
+        },
+        { default: () => "继承" }
+      ),
+  },
 ];
 
 export default defineComponent({
