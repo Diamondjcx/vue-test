@@ -94,6 +94,19 @@ const menuOptions = [
         { default: () => "tailwindcss测试" }
       ),
   },
+  {
+    key: "codeEditor",
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: "codeEditor",
+          },
+        },
+        { default: () => "codeEditor测试" }
+      ),
+  },
 ];
 
 export default defineComponent({

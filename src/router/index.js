@@ -6,6 +6,7 @@ import LanguageView from "../views/Header.vue";
 import NewFeatureView from "../views/newFeature/index.vue";
 import ExtendsView from "../views/extends/index.vue";
 import TailwindcssView from "../views/tailwindcss/index.vue";
+import CodeEditorView from "../views/codeEditorView/index.vue";
 // css新特性
 // 通信
 // vue3新特性
@@ -49,6 +50,11 @@ const router = createRouter({
       path: "/tailwindcss",
       name: "tailwindcss",
       component: TailwindcssView,
+    },
+    {
+      path: "/codeEditor",
+      name: "codeEditor",
+      component: CodeEditorView,
     },
   ],
 });
