@@ -7,6 +7,8 @@ import NewFeatureView from "../views/newFeature/index.vue";
 import ExtendsView from "../views/extends/index.vue";
 import TailwindcssView from "../views/tailwindcss/index.vue";
 import CodeEditorView from "../views/codeEditorView/index.vue";
+import upload from "../views/upload/index.vue";
+import grid from "../views/grid/index.vue";
 // css新特性
 // 通信
 // vue3新特性
@@ -55,6 +57,16 @@ const router = createRouter({
       path: "/codeEditor",
       name: "codeEditor",
       component: CodeEditorView,
+    },
+    {
+      path: "/upload",
+      name: "upload",
+      component: upload,
+    },
+    {
+      path: "/grid",
+      name: "grid",
+      component: grid,
     },
   ],
 });

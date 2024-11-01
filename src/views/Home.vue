@@ -107,6 +107,32 @@ const menuOptions = [
         { default: () => "codeEditor测试" }
       ),
   },
+  {
+    key: "upload",
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: "upload",
+          },
+        },
+        { default: () => "upload测试" }
+      ),
+  },
+  {
+    key: "grid",
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: "grid",
+          },
+        },
+        { default: () => "grid" }
+      ),
+  },
 ];
 
 export default defineComponent({
