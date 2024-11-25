@@ -19,6 +19,7 @@
     "@codemirror/theme-one-dark": "^6.1.2",
     "@codemirror/view": "^6.33.0",
     "codemirror": "^6.0.1",
+    "file-saver": "^2.0.5",
     "jszip": "^3.10.1",
     "less": "^4.2.0",
     "pinia": "^2.1.7",

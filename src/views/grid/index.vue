@@ -22,6 +22,10 @@ const cards = ref([
   { id: 11, title: "Card 11" },
   { id: 12, title: "Card 12" },
 ]);
+import saveAs from "file-saver";
+const text = "这是要保存的文本内容";
+const blob = new Blob([text], { type: "text/plain" });
+saveAs(blob, "myFile.txt");
 </script>
 
 <style scoped>
