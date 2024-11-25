@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, defineExpose } from "vue";
 const name = ref("11111");
 defineExpose({ name });
 </script>

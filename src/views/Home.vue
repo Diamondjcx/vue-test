@@ -12,133 +12,40 @@
 import { defineComponent, h, ref } from "vue";
 import { NIcon } from "naive-ui";
 import { RouterLink } from "vue-router";
-import { useRoute, useRouter } from "vue-router";
+import { useRoute } from "vue-router";
+
 const route = useRoute();
-console.log("route", useRoute());
+
+const createMenuOption = (key, name, label) => ({
+  key,
+  label: () =>
+    h(
+      RouterLink,
+      {
+        to: {
+          name,
+        },
+      },
+      { default: () => label }
+    ),
+});
+
 const menuOptions = [
-  {
-    key: "css-features",
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: "css-features",
-          },
-        },
-        { default: () => "css新特性" }
-      ),
-  },
-  {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: "language",
-          },
-        },
-        { default: () => "语言切换" }
-      ),
-    key: "language",
-  },
-  {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: "communication-parent",
-          },
-        },
-        { default: () => "通信" }
-      ),
-    key: "communication",
-  },
-  {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: "new-feature",
-          },
-        },
-        { default: () => "vue3新特性" }
-      ),
-    key: "new-feature",
-  },
-  {
-    key: "extends",
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: "extends",
-          },
-        },
-        { default: () => "继承" }
-      ),
-  },
-  {
-    key: "tailwindcss",
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: "tailwindcss",
-          },
-        },
-        { default: () => "tailwindcss测试" }
-      ),
-  },
-  {
-    key: "codeEditor",
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: "codeEditor",
-          },
-        },
-        { default: () => "codeEditor测试" }
-      ),
-  },
-  {
-    key: "upload",
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: "upload",
-          },
-        },
-        { default: () => "upload测试" }
-      ),
-  },
-  {
-    key: "grid",
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: "grid",
-          },
-        },
-        { default: () => "grid" }
-      ),
-  },
+  createMenuOption("css-features", "css-features", "css新特性"),
+  createMenuOption("language", "language", "语言切换"),
+  createMenuOption("communication", "communication-parent", "通信"),
+  createMenuOption("new-feature", "new-feature", "vue3新特性"),
+  createMenuOption("extends", "extends", "继承"),
+  createMenuOption("tailwindcss", "tailwindcss", "tailwindcss测试"),
+  createMenuOption("codeEditor", "codeEditor", "codeEditor测试"),
+  createMenuOption("upload", "upload", "upload测试"),
+  createMenuOption("grid", "grid", "grid"),
 ];
 
 export default defineComponent({
   setup() {
     return {
-      activeKey: ref(null),
+      activeKey: ref("css-features"),
       menuOptions,
     };
   },
