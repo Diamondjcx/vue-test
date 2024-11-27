@@ -10,6 +10,7 @@ import CodeEditorView from "../views/codeEditorView/index.vue";
 import upload from "../views/upload/index.vue";
 import grid from "../views/grid/index.vue";
 import table from "../views/table/index.vue";
+import crypto from "../views/crypto/index.vue";
 // css新特性
 // 通信
 // vue3新特性
@@ -73,6 +74,11 @@ const router = createRouter({
       path: "/table",
       name: "table",
       component: table,
+    },
+    {
+      path: "/crypto",
+      name: "crypto",
+      component: crypto,
     },
   ],
 });

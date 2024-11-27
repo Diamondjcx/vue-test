@@ -40,6 +40,7 @@ const menuOptions = [
   createMenuOption("codeEditor", "codeEditor", "codeEditor测试"),
   createMenuOption("upload", "upload", "upload测试"),
   createMenuOption("grid", "grid", "grid"),
+  createMenuOption("crypto", "crypto", "crypto"),
 ];
 
 export default defineComponent({
