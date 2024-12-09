@@ -42,6 +42,7 @@ const menuOptions = [
   createMenuOption("grid", "grid", "grid"),
   createMenuOption("crypto", "crypto", "crypto"),
   createMenuOption("file", "file", "file"),
+  createMenuOption("input", "input", "input"),
 ];
 
 export default defineComponent({
