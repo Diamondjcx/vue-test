@@ -41,6 +41,7 @@ const menuOptions = [
   createMenuOption("upload", "upload", "upload测试"),
   createMenuOption("grid", "grid", "grid"),
   createMenuOption("crypto", "crypto", "crypto"),
+  createMenuOption("file", "file", "file"),
 ];
 
 export default defineComponent({
