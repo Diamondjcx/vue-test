@@ -11,6 +11,15 @@
     <p>.zip</p>
     <input type="file" @change="handleFileChange" accept=".zip" />
   </div>
+  <div>
+    <p>.tar / .TAR</p>
+    <input type="file" @change="handleFileChange" accept=".tar" />
+    <input type="file" @change="handleFileChange" accept=".TAR" />
+  </div>
+  <div>
+    <p>.zip,.tar</p>
+    <input type="file" @change="handleFileChange" accept=".zip,.tar" />
+  </div>
 </template>
 
 <script setup>
