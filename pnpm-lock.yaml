@@ -56,6 +56,9 @@ importers:
       less:
         specifier: ^4.2.0
         version: 4.2.0
+      papaparse:
+        specifier: ^5.4.1
+        version: 5.4.1
       pinia:
         specifier: ^2.1.7
         version: 2.1.7(vue@3.5.1)
@@ -1164,6 +1167,9 @@ packages:
 
   pako@1.0.11:
     resolution: {integrity: sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==}
+
+  papaparse@5.4.1:
+    resolution: {integrity: sha512-HipMsgJkZu8br23pW15uvo6sib6wne/4woLZPlFf3rpDyMe9ywEXUsuD7+6K9PRkJlVT51j/sCOYDKGGS3ZJrw==}
 
   parse-node-version@1.0.1:
     resolution: {integrity: sha512-3YHlOa/JgH6Mnpr05jP9eDG254US9ek25LyIxZlDItp2iJtwyaXQb57lBYLdT3MowkUFYEV2XXNAYIPlESvJlA==}
@@ -2768,6 +2774,8 @@ snapshots:
       yocto-queue: 1.0.0
 
   pako@1.0.11: {}
+
+  papaparse@5.4.1: {}
 
   parse-node-version@1.0.1: {}
 

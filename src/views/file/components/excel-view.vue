@@ -1,6 +1,6 @@
 <template>
   <vue-office-excel
-    :src="csv"
+    :src="excel"
     style="height: 100vh"
     @rendered="renderedHandler"
     @error="errorHandler"
