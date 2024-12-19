@@ -43,6 +43,7 @@ const menuOptions = [
   createMenuOption("crypto", "crypto", "crypto"),
   createMenuOption("file", "file", "file"),
   createMenuOption("input", "input", "input"),
+  createMenuOption("request", "request", "request"),
 ];
 
 export default defineComponent({
