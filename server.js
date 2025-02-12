@@ -12,7 +12,7 @@ app.get("/getLongData", async (req, res) => {
   });
 
   res.send({
-    code: 200,
+    code: ECONNABORTED,
     message: "请求成功！",
   });
 });

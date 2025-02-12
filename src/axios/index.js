@@ -1,6 +1,6 @@
 import { setToken } from "./globalCancelToken.js";
 import axios from "axios";
-
+import axiosRetry from "axios-retry";
 const instance = axios.create({
   baseURL: " http://127.0.0.1:3000/",
   timeout: 10000,
@@ -8,6 +8,13 @@ const instance = axios.create({
   headers: {
     "Content-Type": "application/json;charset=UTF-8",
   },
+});
+axiosRetry(instance, {
+  retries: 3, // 设置重试次数
+  retryDelay: () => 500, // 设置重试延迟时间
+  shouldResetTimeout: true, // 重置请求超时时间
+  retryCondition: (error) =>
+    ["ECONNABORTED", "ERR_NETWORK"].includes(error.code), // 重试条件
 });
 
 // request拦截器
