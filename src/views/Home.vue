@@ -44,6 +44,7 @@ const menuOptions = [
   createMenuOption("file", "file", "file"),
   createMenuOption("input", "input", "input"),
   createMenuOption("request", "request", "request"),
+  createMenuOption("pdf", "pdf", "pdf"),
 ];
 
 export default defineComponent({

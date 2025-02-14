@@ -14,6 +14,7 @@ import crypto from "../views/crypto/index.vue";
 import file from "../views/file/index.vue";
 import input from "../views/input/index.vue";
 import request from "../views/request/index.vue";
+import pdf from "../views/pdf/index.vue";
 // css新特性
 // 通信
 // vue3新特性
@@ -97,6 +98,11 @@ const router = createRouter({
       path: "/request",
       name: "request",
       component: request,
+    },
+    {
+      path: "/pdf",
+      name: "pdf",
+      component: pdf,
     },
   ],
 });

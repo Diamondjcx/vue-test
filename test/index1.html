@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Image Split in PDF with Preview</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        .container {
+            display: flex;
+        }
+        img {
+            /* 避免图片被分页分割 */
+            page-break-inside: avoid;
+            max-width: 100%;
+            height: 600px;
+        }
+
+        .image-container {
+            /* page-break-inside: avoid; */
+        }
+
+        #pdf-preview {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+</head>
+<!-- 避免导出时被分割 -->
+<body>
+   <div class="container">
+    <div id="content">
+        <p>这是一些文本内容。</p>
+        <div class="image-container">
+            <!-- 替换为实际图片的 URL -->
+           <div>
+            <img src="./images/07akioni (1).jpeg" alt="示例图片">
+           </div>
+            <div>
+                <img src="./images/07akioni (1).jpeg" alt="示例图片">
+            </div>
+        </div>
+        <p>这是更多的文本内容。</p>
+    </div>
+    <button id="generate-pdf">生成并预览 PDF</button>
+
+   </div>
+    <div id="preview-container">
+        <object id="pdf-preview" type="application/pdf"></object>
+    </div>
+
+    <script>
+        const element = document.getElementById('content');
+        const options = {
+            margin: 10,
+            filename: 'no-image-split.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+
+        document.getElementById('generate-pdf').addEventListener('click', function () {
+            html2pdf().from(element).set().outputPdf('datauristring').then(function (pdfData) {
+                // 获取 PDF 预览的 object 元素
+                const pdfPreview = document.getElementById('pdf-preview');
+                // 设置 object 元素的 data 属性为生成的 PDF 的 Base64 数据
+                pdfPreview.data = pdfData;
+            });
+        });
+    </script>
+</body>
+
+</html>

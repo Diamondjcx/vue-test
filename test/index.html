@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMap Screenshot with Markers</title>
+    <style>
+        #container {
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+    <!-- 引入高德地图 API -->
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=57308916576f11343a35498cc3f689c6"></script>
+    <!-- 引入 html2canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<!-- 高德地图截图生成src -->
+<body>
+    <div id="container"></div>
+    <button id="screenshotBtn">截图</button>
+    <img id="screenshotImg" src="" alt="Screenshot">
+    <script>
+        // 初始化地图
+        var map = new AMap.Map('container', {
+            zoom: 10,
+            center: [116.397428, 39.90923]
+        });
+
+        // 添加 marker
+        var marker = new AMap.Marker({
+            position: [116.397428, 39.90923],
+            title: '示例标记'
+        });
+        marker.setMap(map);
+
+        // 截图按钮点击事件
+        document.getElementById('screenshotBtn').addEventListener('click', function () {
+            html2canvas(document.getElementById('container')).then(function (canvas) {
+                // 获取 marker 的像素坐标
+                var pixel = map.lngLatToContainer(marker.getPosition());
+
+                // 创建绘图上下文
+                var ctx = canvas.getContext('2d');
+
+                // 手动绘制 marker（这里简单绘制一个红色圆形作为示例）
+                ctx.beginPath();
+                ctx.arc(pixel.getX(), pixel.getY(), 10, 0, 2 * Math.PI);
+                ctx.fillStyle = 'red';
+                ctx.fill();
+
+                // 将 canvas 转换为图片显示
+                var img = document.getElementById('screenshotImg');
+                img.src = canvas.toDataURL();
+            });
+        });
+
+        
+    </script>
+</body>
+
+</html>
