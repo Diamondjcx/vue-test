@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/Home.vue";
+import ChatView from "../views/chat/index.vue";
 import CssView from "../views/css/index.vue";
 import ParentView from "../views/communication/index.vue";
 import LanguageView from "../views/Header.vue";
@@ -15,6 +16,7 @@ import file from "../views/file/index.vue";
 import input from "../views/input/index.vue";
 import request from "../views/request/index.vue";
 import pdf from "../views/pdf/index.vue";
+import map from "../views/map/index.vue";
 // css新特性
 // 通信
 // vue3新特性
@@ -27,6 +29,11 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView,
+    },
+    {
+      path: "/chat",
+      name: "chat",
+      component: ChatView,
     },
     {
       path: "/css",
@@ -103,6 +110,11 @@ const router = createRouter({
       path: "/pdf",
       name: "pdf",
       component: pdf,
+    },
+    {
+      path: "/map",
+      name: "map",
+      component: map,
     },
   ],
 });

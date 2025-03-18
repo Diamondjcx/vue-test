@@ -1,6 +1,6 @@
 <template>
   <n-menu
-    style="width: 200px"
+    style="width: 200px; height: calc(100vh- 100 px); overflow: auto"
     v-model:value="activeKey"
     :options="menuOptions"
     responsive
@@ -32,6 +32,7 @@ const createMenuOption = (key, name, label) => ({
 
 const menuOptions = [
   createMenuOption("css-features", "css-features", "css新特性"),
+  createMenuOption("chat", "chat", "chat"),
   createMenuOption("language", "language", "语言切换"),
   createMenuOption("communication", "communication-parent", "通信"),
   createMenuOption("new-feature", "new-feature", "vue3新特性"),
@@ -45,6 +46,7 @@ const menuOptions = [
   createMenuOption("input", "input", "input"),
   createMenuOption("request", "request", "request"),
   createMenuOption("pdf", "pdf", "pdf"),
+  createMenuOption("map", "map", "map"),
 ];
 
 export default defineComponent({

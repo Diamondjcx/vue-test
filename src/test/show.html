@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>线性过渡</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .box {
+            width: 300px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            overflow: hidden;
+            transition: height 0.3s ease-in-out;
+            height: 0;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .box.expanded {
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="toggleButton">展开/收缩</button>
+    <div class="box" id="myBox">
+        <div class="content">
+            <p>这是盒子里面的内容。</p>
+        </div>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const myBox = document.getElementById('myBox');
+        toggleButton.addEventListener('click', function () {
+            myBox.classList.toggle('expanded');
+        });
+    </script>
+</body>
+
+</html>

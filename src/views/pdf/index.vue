@@ -86,7 +86,7 @@ const previewPDF = async () => {
   showModal.value = true;
   const tab1txt = document.getElementById("tab1txt").innerHTML;
   const echartImage = await captureChart();
-
+  console.log("tab1txt", tab1txt);
   const mapImage = await captureMap();
   mapimg.value = mapImage;
   // 合并所有内容
@@ -122,6 +122,7 @@ const previewPDF = async () => {
   // 清理临时容器
   // render(null, container);
 };
+console.log("tab1txt");
 </script>
 
 <style lang="less" >

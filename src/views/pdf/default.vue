@@ -1,9 +1,21 @@
 <template>
   <div>
     <div id="content">
-      <h1>Vue 3 页面导出为 PDF</h1>
-      <p>这是一个简单的示例，展示如何将 HTML 页面导出为 PDF。</p>
-      <p>可以生成 PDF 并进行下载，或者预览。</p>
+      <div class="box">
+        <h1>Vue 3 页面导出为 PDF</h1>
+        <p>这是一个简单的示例，展示如何将 HTML 页面导出为 PDF。</p>
+        <p>可以生成 PDF 并进行下载，或者预览。</p>
+        <p>这是一个简单的示例，展示如何将 HTML 页面导出为 PDF。</p>
+        <p>可以生成 PDF 并进行下载，或者预览。</p>
+        <p>这是一个简单的示例，展示如何将 HTML 页面导出为 PDF。</p>
+        <p>可以生成 PDF 并进行下载，或者预览。</p>
+        <p>这是一个简单的示例，展示如何将 HTML 页面导出为 PDF。</p>
+        <p>可以生成 PDF 并进行下载，或者预览。</p>
+        <p>这是一个简单的示例，展示如何将 HTML 页面导出为 PDF。</p>
+        <p>可以生成 PDF 并进行下载，或者预览。</p>
+        <p>这是一个简单的示例，展示如何将 HTML 页面导出为 PDF。</p>
+        <p>可以生成 PDF 并进行下载，或者预览。</p>
+      </div>
     </div>
 
     <button @click="generatePDF">生成 PDF 并下载</button>
@@ -61,6 +73,10 @@ export default {
   margin: 20px auto;
   padding: 20px;
   border: 1px solid #ddd;
+}
+.box {
+  height: 100px;
+  overflow: auto;
 }
 button {
   padding: 10px 20px;
