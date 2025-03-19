@@ -47,6 +47,7 @@ const menuOptions = [
   createMenuOption("request", "request", "request"),
   createMenuOption("pdf", "pdf", "pdf"),
   createMenuOption("map", "map", "map"),
+  createMenuOption("world", "world", "world"),
 ];
 
 export default defineComponent({

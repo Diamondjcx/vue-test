@@ -6,6 +6,7 @@
 </template>
   
   <script>
+import "../../../public/amap/AMap3.js";
 export default {
   data() {
     return {

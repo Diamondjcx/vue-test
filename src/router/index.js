@@ -17,6 +17,7 @@ import input from "../views/input/index.vue";
 import request from "../views/request/index.vue";
 import pdf from "../views/pdf/index.vue";
 import map from "../views/map/index.vue";
+import world from "../views/world/index.vue";
 // css新特性
 // 通信
 // vue3新特性
@@ -115,6 +116,11 @@ const router = createRouter({
       path: "/map",
       name: "map",
       component: map,
+    },
+    {
+      path: "/world",
+      name: "world",
+      component: world,
     },
   ],
 });
