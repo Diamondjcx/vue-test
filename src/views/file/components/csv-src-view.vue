@@ -39,7 +39,7 @@ async function fetchCsv() {
     const csvText = txt;
 
     // 使用 PapaParse 解析 CSV
-    Papa.parse(csvText, {
+     Papa.parse(csvText, {
       complete: (result) => {
         csvData.value = result.data;
         console.log("csvData", csvData.value);

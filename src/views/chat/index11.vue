@@ -4,8 +4,8 @@
     <!-- <vue-markdown :source="markdownText" /> -->
   </div>
 </template>
-  
-  <script>
+
+<script>
 // import VueMarkdown from "vue-markdown";
 
 export default {
@@ -35,7 +35,7 @@ export default {
   },
 };
 </script>
-  
-  <style>
+
+<style>
 /* 你可以在这里添加自定义样式 */
 </style>

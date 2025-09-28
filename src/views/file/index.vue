@@ -1,6 +1,6 @@
 <template>
   <n-tabs>
-    <n-tab-pane name="doc" title="Doc">
+         <n-tab-pane name="doc" title="Doc">
       <DocView />
     </n-tab-pane>
     <n-tab-pane name="excel" title="Excel">
