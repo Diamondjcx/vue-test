@@ -23,106 +23,157 @@ import world from "../views/world/index.vue";
 // vue3新特性
 // 中英文切换
 
+export const routes = [
+  {
+    path: "/chat",
+    name: "chat",
+    component: ChatView,
+    meta: {
+      title: "ChatGPT",
+    },
+  },
+  {
+    path: "/css",
+    name: "css-features",
+    component: CssView,
+    meta: {
+      title: "css新特性",
+    },
+  },
+
+  {
+    path: "/language",
+    name: "language",
+    component: LanguageView,
+    meta: {
+      title: "语言切换",
+    },
+  },
+  {
+    path: "/communication",
+    name: "communication-parent",
+    component: ParentView,
+    meta: {
+      title: "新特性通信",
+    },
+  },
+  {
+    path: "/new",
+    name: "new-feature",
+    component: NewFeatureView,
+    meta: {
+      title: "vue3新特性",
+    },
+  },
+  {
+    path: "/extends",
+    name: "extends",
+    component: ExtendsView,
+    meta: {
+      title: "vue3继承",
+    },
+  },
+  {
+    path: "/tailwindcss",
+    name: "tailwindcss",
+    component: TailwindcssView,
+    meta: {
+      title: "tailwindcss测试",
+    },
+  },
+  {
+    path: "/codeEditor",
+    name: "codeEditor",
+    component: CodeEditorView,
+    meta: {
+      title: "codeEditor测试",
+    },
+  },
+  {
+    path: "/upload",
+    name: "upload",
+    component: upload,
+    meta: {
+      title: "upload上传",
+    },
+  },
+  {
+    path: "/grid",
+    name: "grid",
+    component: grid,
+    meta: {
+      title: "grid布局测试",
+    },
+  },
+  // {
+  //   path: "/table",
+  //   name: "table",
+  //   component: table,
+  //   meta: {
+  //     title: "table",
+  //   },
+  // },
+  {
+    path: "/crypto",
+    name: "crypto",
+    component: crypto,
+    meta: {
+      title: "加密解密",
+    },
+  },
+  {
+    path: "/file",
+    name: "file",
+    component: file,
+    meta: {
+      title: "不同文件渲染",
+    },
+  },
+  {
+    path: "/input",
+    name: "input",
+    component: input,
+    meta: {
+      title: "input上传",
+    },
+  },
+  {
+    path: "/request",
+    name: "request",
+    component: request,
+    meta: {
+      title: "请求取消",
+    },
+  },
+  {
+    path: "/pdf",
+    name: "pdf",
+    component: pdf,
+    meta: {
+      title: "pdf渲染",
+    },
+  },
+  {
+    path: "/map",
+    name: "map",
+    component: map,
+    meta: {
+      title: "高德地图",
+    },
+  },
+  {
+    path: "/world",
+    name: "world",
+    component: world,
+    meta: {
+      title: "vue3新特性",
+    },
+  },
+];
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: "/",
-      name: "home",
-      component: HomeView,
-    },
-    {
-      path: "/chat",
-      name: "chat",
-      component: ChatView,
-    },
-    {
-      path: "/css",
-      name: "css-features",
-      component: CssView,
-    },
-
-    {
-      path: "/language",
-      name: "language",
-      component: LanguageView,
-    },
-    {
-      path: "/communication",
-      name: "communication-parent",
-      component: ParentView,
-    },
-    {
-      path: "/new",
-      name: "new-feature",
-      component: NewFeatureView,
-    },
-    {
-      path: "/extends",
-      name: "extends",
-      component: ExtendsView,
-    },
-    {
-      path: "/tailwindcss",
-      name: "tailwindcss",
-      component: TailwindcssView,
-    },
-    {
-      path: "/codeEditor",
-      name: "codeEditor",
-      component: CodeEditorView,
-    },
-    {
-      path: "/upload",
-      name: "upload",
-      component: upload,
-    },
-    {
-      path: "/grid",
-      name: "grid",
-      component: grid,
-    },
-    {
-      path: "/table",
-      name: "table",
-      component: table,
-    },
-    {
-      path: "/crypto",
-      name: "crypto",
-      component: crypto,
-    },
-    {
-      path: "/file",
-      name: "file",
-      component: file,
-    },
-    {
-      path: "/input",
-      name: "input",
-      component: input,
-    },
-    {
-      path: "/request",
-      name: "request",
-      component: request,
-    },
-    {
-      path: "/pdf",
-      name: "pdf",
-      component: pdf,
-    },
-    {
-      path: "/map",
-      name: "map",
-      component: map,
-    },
-    {
-      path: "/world",
-      name: "world",
-      component: world,
-    },
-  ],
+  routes,
 });
 
 export default router;

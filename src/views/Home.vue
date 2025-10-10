@@ -1,19 +1,23 @@
 <template>
-  <n-menu
-    style="width: 200px; height: calc(100vh- 100 px); overflow: auto"
-    v-model:value="activeKey"
-    :options="menuOptions"
-    responsive
-  />
-  <router-view></router-view>
+  <n-flex class="app-container" gap="20px">
+    <n-menu
+      style="width: 200px; height: calc(100vh - 100px); overflow: auto"
+      v-model:value="activeKey"
+      :options="menuOptions"
+      responsive
+    />
+    <div class="app-main">
+      <router-view></router-view>
+    </div>
+  </n-flex>
 </template>
-  
-  <script>
-import { defineComponent, h, ref } from "vue";
+
+<script>
+import { computed, defineComponent, h, ref } from "vue";
 import { NIcon } from "naive-ui";
 import { RouterLink } from "vue-router";
-import { useRoute } from "vue-router";
-
+import { useRoute, useRouter } from "vue-router";
+import { routes } from "../router/index.js";
 const route = useRoute();
 
 const createMenuOption = (key, name, label) => ({
@@ -29,26 +33,13 @@ const createMenuOption = (key, name, label) => ({
       { default: () => label }
     ),
 });
-
-const menuOptions = [
-  createMenuOption("css-features", "css-features", "css新特性"),
-  createMenuOption("chat", "chat", "chat"),
-  createMenuOption("language", "language", "语言切换"),
-  createMenuOption("communication", "communication-parent", "通信"),
-  createMenuOption("new-feature", "new-feature", "vue3新特性"),
-  createMenuOption("extends", "extends", "继承"),
-  createMenuOption("tailwindcss", "tailwindcss", "tailwindcss测试"),
-  createMenuOption("codeEditor", "codeEditor", "codeEditor测试"),
-  createMenuOption("upload", "upload", "upload测试"),
-  createMenuOption("grid", "grid", "grid"),
-  createMenuOption("crypto", "crypto", "crypto"),
-  createMenuOption("file", "file", "file"),
-  createMenuOption("input", "input", "input"),
-  createMenuOption("request", "request", "request"),
-  createMenuOption("pdf", "pdf", "pdf"),
-  createMenuOption("map", "map", "map"),
-  createMenuOption("world", "world", "world"),
-];
+const menuOptions = computed(() => {
+  return routes
+    .filter((item) => item.meta && item.meta.title)
+    .map((item) =>
+      createMenuOption(item.name, item.name, item.meta.title || item.name)
+    );
+});
 
 export default defineComponent({
   setup() {
@@ -59,3 +50,16 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="less">
+.app-container {
+  // height: 100vh;
+  // width: 100vw;
+  .app-main {
+    flex: 1;
+    height: calc(100vh - 100px);
+    overflow: auto;
+    padding: 20px;
+  }
+}
+</style>

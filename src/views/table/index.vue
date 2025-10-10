@@ -5,8 +5,6 @@
   封装抽屉组件，提供打开和关闭的方法，提供插槽，提供默认插槽，提供底部插槽，提供右侧插槽，提供底部右侧插槽，提供底部左侧插槽，提供右侧底部插槽，提供右侧底部左
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

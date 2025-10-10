@@ -1,6 +1,6 @@
 <template>
   <n-tabs>
-         <n-tab-pane name="doc" title="Doc">
+    <n-tab-pane name="doc" title="Doc">
       <DocView />
     </n-tab-pane>
     <n-tab-pane name="excel" title="Excel">
@@ -22,5 +22,4 @@ import CsvView from "./components/csv-view.vue";
 import CsvSrcView from "./components/csv-src-view.vue";
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
