@@ -12,13 +12,14 @@
   </n-flex>
 </template>
 
-<script>
+<script setup>
 import { computed, defineComponent, h, ref } from "vue";
 import { NIcon } from "naive-ui";
 import { RouterLink } from "vue-router";
 import { useRoute, useRouter } from "vue-router";
 import { routes } from "../router/index.js";
 const route = useRoute();
+const activeKey = ref("");
 
 const createMenuOption = (key, name, label) => ({
   key,
@@ -40,21 +41,13 @@ const menuOptions = computed(() => {
       createMenuOption(item.name, item.name, item.meta.title || item.name)
     );
 });
-
-export default defineComponent({
-  setup() {
-    return {
-      activeKey: ref("css-features"),
-      menuOptions,
-    };
-  },
-});
+activeKey.value = menuOptions.value[0]?.key || "";
 </script>
 
 <style lang="less">
 .app-container {
-  // height: 100vh;
-  // width: 100vw;
+  height: 100%;
+  width: 100vw;
   .app-main {
     flex: 1;
     height: calc(100vh - 100px);
