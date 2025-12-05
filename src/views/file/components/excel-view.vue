@@ -19,7 +19,7 @@ export default {
   },
   data() {
     return {
-      excel: "http://static.shanhuxueyuan.com/demo/excel.xlsx", //设置文档地址
+      excel: "http://10.10.20.130:7777/model/price/file/download", //设置文档地址
       csv: "http://10.10.15.16:18000/api/v1/proxy/user/file/comm/download?filename=%2Fdisk02%2Fatti%2Fdata%2Fdata%2FProviderying1%2F20549306%2Fall%2F%2Fdata-table.csv&node=10.10.15.21",
     };
   },
